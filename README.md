@@ -58,5 +58,19 @@ As shown in the following figure, place the line connected to the development bo
 <img src ="https://github.com/Kevin-MrYe/Automatic-Prescription-Medicine-Monitoring-System/blob/master/images/pcblayout.jpg" width = '600px'>
 
 ## 6.3D Box Design
+In order to be able to wrap the circuit details instead of exposing it, this project uses 3D Builder to design two 3D printing boxes. The outer size of box A is 22.8 x 5.9 x 3.3 cm, and the outer size of box B is 22.8 x 5.9 x 1.0 cm. The edge thickness of both boxes is 2mm. The model of the 3D printing box is shown in the following figure:
+
+<img src ="https://github.com/Kevin-MrYe/Automatic-Prescription-Medicine-Monitoring-System/blob/master/images/3dbox.jpg" width = '600px'>
+
 ## 7.Web Application Architecture
+In order to solve the problem of high front-end and back-end coupling and improve the scalability of web application, this project separates the front-end application from the back-end application. Write client code in the front-end application. Write the server code in the back-end application and provide the data interface. Under this architecture, the front-end can test the function by manufacturing test data, and the back-end test can test the function by other tools, such as postman. Application developed in this way is called front-end and back-end separated application, and its system
+architecture is shown in the following figure:
+
+<img src ="https://github.com/Kevin-MrYe/Automatic-Prescription-Medicine-Monitoring-System/blob/master/images/Frontendbackendseparation.jpg" width = '600px'>
+
 ## 8.Arduino Code Design
+Regarding the Arduino code design of this project, the goal is to obtain the current time, switch signal, and accelerometer signal. Then, when the patient interacts with the smart pill box, the above data is sent to the Web application for processing through HTTP requests. The Arduino code design flow chart is shown in the following figure:
+
+
+<img src ="https://github.com/Kevin-MrYe/Automatic-Prescription-Medicine-Monitoring-System/blob/master/images/arduinocode.jpg" width = '600px'>
+
