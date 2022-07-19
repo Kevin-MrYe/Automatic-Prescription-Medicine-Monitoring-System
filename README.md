@@ -14,10 +14,49 @@ the patient taking the medicine at the correct time, and remind the patient to t
 * [8.Arduino Code Design](#8arduino-code-design)
 
 ## 1.System Architecture
+The project is based on an automatic prescription medicine monitoring system. As
+shown in following figure, the entire system architecture includes three parts: Arduino, Connection, and Web application.
+
+<img src ="https://github.com/Kevin-MrYe/Automatic-Prescription-Medicine-Monitoring-System/blob/master/images/systemarchitecture.png" width = '600px'>
+
+The first part is Arduino, including microcontroller, accelerometer, micro switches, LED, buzzer and Li-Po battery. The above components are integrated in a common pill box with seven compartments. 
+
+The second part is Connection. The design goal of this smart pill box is mainly for home use scenarios, so Wi-Fi wireless transmission is selected as the communication method.
+
+The third part is Web Application. The web application will accept the medicationevent data from Arduino, put it into the database and display it on the front end of theweb application so that family members and carers can view it in time.
+
 ## 2.Component Used
+- Basic Board Kit
+- Pill Boxes with Seven Compartments
+- MKR WiFi 1010 Development Board
+- ADXL345 Accelerometer
+- Mini Micro Switch with Roller Lever
+- 3.7V 1100mAh Rechargeable Li-Po Battery
+- Printed Circuit Board
+- 3D Box
+
 ## 3.Software Used
+- **PCB Design**: Altium Designer 21.6
+- **3D Printing Box Design**: 3D Builder 18.0
+- **Breadboard Circuit Diagram Design**: Fritzing 0.9
+- **Arduino Coding**: Arduino IDE 1.8
+- **Web Application**: Intellij IDEA 2021.2 ( Java language )
+- **Database**: Mysql 5.7 Navicat 15.0
+- **Cloud Server**: CentOS 7.6 (64bit) 1 Core 1G Memory 20G System Volume
+
 ## 4.Breadboard Circuit Diagram
+Before actually testing the components, a breadboard circuit diagram should be constructed to confirm the placement of the components and the use of the pins of the development board. As shown in the following figure, the breadboard is connected to MKR WiFi development board, seven micro-switches, an ADXL accelerometer, an LED and a buzzer. 
+
+<img src ="https://github.com/Kevin-MrYe/Automatic-Prescription-Medicine-Monitoring-System/blob/master/images/breadboarddiagram.jpg" width = '600px'>
+
+
 ## 5.PCB Design
+Printed Circuit Boards (PCBs) are used in almost all electronic applications. In this project, the goal is to build a portable, small actual smart pill box, not just a concept product to be tested on a breadboard. This project uses Altium Design to design the PCB of the smart pill box.
+
+As shown in the following figure, place the line connected to the development board on one side (red line), and place the line connected to GND and VCC on the other side (blue line). In order to allow the USB interface of the development board to be used for external power supply, the component MKR WiFi 1010 is placed close to the right edge. In order for the LED light to be displayed to the patient, place it near the bottom edge. In order to be able to solder the seven microswitches to the interface with good rules, place the microswitches on the top edge.
+
+<img src ="https://github.com/Kevin-MrYe/Automatic-Prescription-Medicine-Monitoring-System/blob/master/images/pcblayout.jpg" width = '600px'>
+
 ## 6.3D Box Design
 ## 7.Web Application Architecture
 ## 8.Arduino Code Design
