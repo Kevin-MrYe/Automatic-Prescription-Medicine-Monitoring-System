@@ -1,4 +1,5 @@
-# springboot-vue-demo
+# Automatic Prescription Medicine Monitoring System
+
 
 ## Project setup
 ```
